@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  :root {
+    &.darkblue-mode {
+      --main-background: hsl(222, 26%, 31%);
+      --toggle-background: hsl(223, 31%, 20%);
+      --keypad-background: hsl(223, 31%, 20%);
+      --screen-background: hsl(224, 36%, 15%);
+
+      --enterdelkey-background: hsl(225, 21%, 49%);
+      --enterdelkey-shadow: hsl(224, 28%, 35%);
+
+      --toggle: hsl(6, 63%, 50%);
+      --togglekey-shadow: hsl(6, 70%, 34%);
+
+      --key-background: hsl(30, 25%, 89%);
+      --key-shadow: hsl(28, 16%, 65%);
+
+      --text-color: hsl(221, 14%, 31%);
+      --white: hsl(0, 0%, 100%);
+      --screentext: hsl(0, 0%, 100%);
+      --equalsbtncolor: hsl(0, 0%, 100%);
+    }
+
+    &.light-mode {
+      --main-background: hsl(0, 0%, 90%);
+      --toggle-background: hsl(0, 5%, 81%);
+      --keypad-background: hsl(0, 5%, 81%);
+      --screen-background: hsl(0, 0%, 93%);
+
+      --enterdelkey-background: hsl(185, 42%, 37%);
+      --enterdelkey-shadow: hsl(185, 58%, 25%);
+
+      --toggle: hsl(25, 98%, 40%);
+      --togglekey-shadow: hsl(25, 99%, 27%);
+
+      --key-background: hsl(45, 7%, 89%);
+      --key-shadow: hsl(35, 11%, 61%);
+
+      --text-color: hsl(60, 10%, 19%);
+      --white: hsl(0, 0%, 100%);
+      --screentext: hsl(60, 10%, 19%);
+      --equalsbtncolor: hsl(60, 10%, 19%);
+    }
+
+    &.bright-mode {
+      --main-background: hsl(268, 75%, 9%);
+      --toggle-background: hsl(268, 71%, 12%);
+      --keypad-background: hsl(268, 71%, 12%);
+      --screen-background: hsl(268, 71%, 12%);
+
+      --enterdelkey-background: hsl(281, 89%, 26%);
+      --enterdelkey-shadow: hsl(285, 91%, 52%);
+
+      --toggle: hsl(176, 100%, 44%);
+      --togglekey-shadow: hsl(177, 92%, 70%);
+
+      --key-background: hsl(268, 47%, 21%);
+      --key-shadow: hsl(290, 70%, 36%);
+
+      --text-color: hsl(52, 100%, 62%);
+      --white: hsl(0, 0%, 100%);
+      --screentext: hsl(52, 100%, 62%);
+      --equalsbtncolor: hsl(60, 10%, 19%);
+    }
+  }
+}
+
+@layer components {
+  /* Here we shall be handling the color changes manually */
+
+  .layout {
+    transition: all 0.3s ease;
+    background-color: var(--main-background);
+  }
+
+  .btnscont {
+    transition: all 0.3s ease;
+    background-color: var(--toggle-background);
+  }
+  .togglecont,
+  .heading {
+    transition: all 0.3s ease;
+    color: var(--screentext);
+  }
+
+  /* Calculator screen */
+  .screen {
+    transition: all 0.3s ease;
+    background-color: var(--screen-background);
+    color: var(--screentext);
+  }
+
+  /* Calculator body */
+  .calcbody {
+    transition: all 0.3s ease;
+    background-color: var(--keypad-background);
+  }
+  .btn {
+    transition: all 0.3s ease;
+    background-color: var(--key-background);
+    border-color: var(--key-shadow);
+    color: var(--text-color);
+  }
+  .delkey,
+  .resetbtn {
+    transition: all 0.3s ease;
+    background-color: var(--enterdelkey-background);
+    border-color: var(--enterdelkey-shadow);
+  }
+  .equalsbtn {
+    transition: all 0.3s ease;
+    background-color: var(--toggle);
+    border-color: var(--togglekey-shadow);
+    color: var(--equalsbtncolor);
+  }
+}

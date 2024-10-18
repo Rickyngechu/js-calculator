@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Rickyngechu/simple-filters)
-- Live Site URL: [Add live site URL here](https://simple-filters.vercel.app/)
+- Solution URL: [Add solution URL here](https://github.com/Rickyngechu/js-calculator)
+- Live Site URL: [Add live site URL here](https://js-calculator-sandy-one.vercel.app/)
 
 ## My process
 
